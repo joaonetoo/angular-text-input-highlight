@@ -213,6 +213,15 @@ export class TextInputHighlightComponent implements OnChanges, OnDestroy {
           this.renderer.listen(this.textInputElement, 'input', () => {
             this.addTags();
           }),
+          this.renderer.listen(this.textInputElement, 'click', () => {
+            this.addTags();
+          } ),
+          this.renderer.listen(this.textInputElement, 'keyup', () => {
+              this.addTags();
+          }),
+          this.renderer.listen(this.textInputElement, 'change', () => {
+              this.addTags();
+          }),
           this.renderer.listen(this.textInputElement, 'scroll', () => {
             this.highlightElement.nativeElement.scrollTop = this.textInputElement.scrollTop;
             this.highlightTagElements = this.highlightTagElements.map(tag => {
