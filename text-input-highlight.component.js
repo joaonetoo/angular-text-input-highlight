@@ -209,7 +209,6 @@ var TextInputHighlightComponent = /** @class */ (function () {
         var remainingIndex = prevTags.length > 0 ? prevTags[prevTags.length - 1].indices.end : 0;
         var remaining = textInputValue.slice(remainingIndex);
         parts.push(escapeHtml(remaining));
-        parts.push('&nbsp;');
         this.highlightedText = parts.join('');
         this.cdr.detectChanges();
         this.highlightTagElements = Array.from(this.highlightElement.nativeElement.getElementsByTagName('span')).map(function (element) {
