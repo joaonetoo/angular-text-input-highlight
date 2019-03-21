@@ -214,6 +214,7 @@ var TextInputHighlightComponent = /** @class */ (function () {
         this.highlightTagElements = Array.from(this.highlightElement.nativeElement.getElementsByTagName('span')).map(function (element) {
             return { element: element, clientRect: element.getBoundingClientRect() };
         });
+        _this.highlightElement.nativeElement.scrollTop = _this.textInputElement.scrollTop;
     };
     TextInputHighlightComponent.prototype.handleTextareaMouseEvent = function (event, eventName) {
         var matchingTagIndex = this.highlightTagElements.findIndex(function (elm) {
