@@ -132,15 +132,11 @@ var TextInputHighlightComponent = /** @class */ (function () {
                     _this.renderer.listen(_this.textInputElement, 'click', function () {
                         _this.addTags();
                     }),
-                    _this.renderer.listen(_this.textInputElement, 'mouseup', function () {
-                        _this.refresh();
-                    }),
                     _this.renderer.listen(_this.textInputElement, 'keyup', function () {
                         _this.addTags();
                     }),
                     _this.renderer.listen(_this.textInputElement, 'change', function () {
                         _this.addTags();
-                        _this.refresh();
                     }),
                     _this.renderer.listen(_this.textInputElement, 'scroll', function () {
                         _this.highlightElement.nativeElement.scrollTop = _this.textInputElement.scrollTop;
